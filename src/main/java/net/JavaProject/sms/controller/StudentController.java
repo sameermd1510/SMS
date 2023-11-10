@@ -20,6 +20,7 @@ public class StudentController {
         return "students";
     }
 
+    //Build Api POST API
     @GetMapping("/students/new")
     public String createStudentForm( Model model){
 
@@ -27,6 +28,7 @@ public class StudentController {
         model.addAttribute("student",student);
         return "create_student";
     }
+
 
     @PostMapping("/students")
     public String saveStudent(@ModelAttribute("student")Student student){
